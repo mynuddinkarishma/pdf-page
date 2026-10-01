@@ -11,6 +11,7 @@ import {
   FileType,
   Lock,
   Mail,
+  RefreshCw,
   ShieldCheck,
   Sparkles,
   UploadCloud,
@@ -199,10 +200,10 @@ export default function App() {
       <div className="converter-page">
         <div className="converter-shell">
           <header className="topbar">
-            <div className="brand-row">
-              <div className="brand-mark small"><FileText size={22} /></div>
+            <button type="button" className="brand-row brand-home-button" onClick={() => window.location.reload()} aria-label="Refresh PDFFlow page">
+              <div className="brand-mark small"><RefreshCw size={22} /></div>
               <span className="brand-name">PDFFlow</span>
-            </div>
+            </button>
 
             <nav className="nav-links">
               <button type="button">Home</button>
@@ -334,8 +335,10 @@ export default function App() {
         <aside className="brand-panel">
           <div>
             <div className="brand-header">
-              <div className="brand-mark"><FileText size={28} /></div>
-              <span className="brand-name">PDFFlow</span>
+              <button type="button" className="brand-home-button" onClick={() => window.location.reload()} aria-label="Refresh PDFFlow page">
+                <div className="brand-mark"><RefreshCw size={28} /></div>
+                <span className="brand-name">PDFFlow</span>
+              </button>
             </div>
             <div className="brand-copy"><h1>Master Your Documents.</h1></div>
             <p className="brand-description">
